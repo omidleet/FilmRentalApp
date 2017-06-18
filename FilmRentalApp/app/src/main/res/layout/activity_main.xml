@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center">
+
+    <TextView
+        android:id="@+id/textView"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Please choose an action:"
+        android:padding="10dp"/>
+
+    <Button
+        android:id="@+id/overview_button"
+        android:onClick="overviewButton"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="Overview Movies"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp" />
+
+    <Button
+        android:id="@+id/rent_button"
+        android:onClick="rentButton"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="Rent A Movie"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp" />
+
+    <Button
+        android:id="@+id/return_button"
+        android:onClick="returnButton"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="Return A Movie"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp" />
+
+
+</LinearLayout>
