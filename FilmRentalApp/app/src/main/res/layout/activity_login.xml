@@ -13,7 +13,7 @@
         android:padding="10dp"/>
 
     <EditText
-        android:id="@+id/user_edit"
+        android:id="@+id/editTextEmail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
@@ -26,7 +26,7 @@
         android:padding="10dp"/>
 
     <EditText
-        android:id="@+id/password_edit"
+        android:id="@+id/editTextPassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
@@ -49,5 +49,11 @@
         android:text="Not a member yet? Click here to subscribe."
         android:padding="10dp"
         android:clickable="true"/>
+
+    <TextView
+        android:id="@+id/txtLoginErrorMessage"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#372c24"/>
 
 </LinearLayout>

@@ -1,23 +1,24 @@
-package com.example.bummybomo.filmrentalapp;
+package com.example.bummybomo.filmrentalapp.Domain;
 
 import android.content.Context;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
+
+import com.example.bummybomo.filmrentalapp.R;
+
 import java.util.ArrayList;
-import java.util.zip.Inflater;
 
 /**
  * Created by bummybomo on 18-6-2017.
  */
 
-public class MovieAdapter extends ArrayAdapter<Movie> {
+public class MovieAdapter extends ArrayAdapter<Film> {
 
 
-    public MovieAdapter(Context context, ArrayList<Movie> filmList) {
+    public MovieAdapter(Context context, ArrayList<Film> filmList) {
 
         super(context, 0, filmList);
     }
@@ -41,7 +42,7 @@ public class MovieAdapter extends ArrayAdapter<Movie> {
             viewHolder = (MovieAdapter.ViewHolder) convertView.getTag();
         }
 
-        Movie f = getItem(position);
+        Film f = getItem(position);
 
         viewHolder.filmId.setText(String.valueOf(f.getFilmId()));
 

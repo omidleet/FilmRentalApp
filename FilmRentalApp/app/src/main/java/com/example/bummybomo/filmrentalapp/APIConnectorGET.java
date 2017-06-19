@@ -106,7 +106,7 @@ public class APIConnectorGET extends AsyncTask<String, Void, String> {
                 products.add(orderForProducts.optInt("ProductId"));
             }
 
-            Movie f = new Movie(filmid, title, status);
+            Film f = new Film(filmid, title, status);
 
             listener.onOrdersAvailable(f);
 
@@ -142,6 +142,6 @@ public class APIConnectorGET extends AsyncTask<String, Void, String> {
 
     //call back interface
     public interface OnMoviesAvailable {
-        void onOrdersAvailable(Movie film);
+        void onOrdersAvailable(Film film);
     }
 }*/
