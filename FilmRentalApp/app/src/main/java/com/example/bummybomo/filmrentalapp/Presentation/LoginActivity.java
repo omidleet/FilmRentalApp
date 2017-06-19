@@ -35,7 +35,7 @@ public class LoginActivity extends AppCompatActivity {
     private TextView txtLoginErrorMsg;
     private Button login_btn;
 
-    private String mUsername;
+    private String mEmail;
     private String mPassword;
 
     public final String TAG = this.getClass().getSimpleName();
@@ -52,13 +52,13 @@ public class LoginActivity extends AppCompatActivity {
         login_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mUsername = editTextEmail.getText().toString();
+                mEmail = editTextEmail.getText().toString();
                 mPassword = editTextPassword.getText().toString();
                 txtLoginErrorMsg.setText("");
 
                 // TODO Checken of username en password niet leeg zijn
 
-                handleLogin(mUsername, mPassword);
+                handleLogin(mEmail, mPassword);
             }
         });
     }
@@ -71,8 +71,8 @@ public class LoginActivity extends AppCompatActivity {
 
         try {
             JSONObject jsonBody  = new JSONObject();
-            jsonBody.put("email", editTextEmail.getText().toString());
-            jsonBody.put("password", editTextPassword.getText().toString());
+            jsonBody.put("email",email);
+            jsonBody.put("password", password);
             JsonObjectRequest jsObjRequest = new JsonObjectRequest
                     (Request.Method.POST, Config.URL_LOGIN, jsonBody, new Response.Listener<JSONObject>() {
 
