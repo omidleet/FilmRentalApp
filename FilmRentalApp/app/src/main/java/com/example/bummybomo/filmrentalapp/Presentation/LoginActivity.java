@@ -30,7 +30,7 @@ import org.json.JSONObject;
 
 public class LoginActivity extends AppCompatActivity {
 
-    private EditText editTextUsername;
+    private EditText editTextEmail;
     private EditText editTextPassword;
     private TextView txtLoginErrorMsg;
     private Button login_btn;
@@ -45,14 +45,14 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        editTextUsername = (EditText) findViewById(R.id.editTextEmail);
+        editTextEmail = (EditText) findViewById(R.id.editTextEmail);
         editTextPassword = (EditText) findViewById(R.id.editTextPassword);
         txtLoginErrorMsg = (TextView) findViewById(R.id.txtLoginErrorMessage);
         login_btn = (Button) findViewById(R.id.login_btn);
         login_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mUsername = editTextUsername.getText().toString();
+                mUsername = editTextEmail.getText().toString();
                 mPassword = editTextPassword.getText().toString();
                 txtLoginErrorMsg.setText("");
 
@@ -63,16 +63,16 @@ public class LoginActivity extends AppCompatActivity {
         });
     }
 
-    private void handleLogin(String username, String password) {
+    private void handleLogin(String email, String password) {
         //
         // Maak een JSON object met username en password. Dit object sturen we mee
         // als request body (zoals je ook met Postman hebt gedaan)
         //
-        String body = "{\"username\":\"" + username + "\",\"password\":\"" + password + "\"}";
-        Log.i(TAG, "handleLogin - body = " + body);
 
         try {
-            JSONObject jsonBody = new JSONObject(body);
+            JSONObject jsonBody  = new JSONObject();
+            jsonBody.put("email", editTextEmail.getText().toString());
+            jsonBody.put("password", editTextPassword.getText().toString());
             JsonObjectRequest jsObjRequest = new JsonObjectRequest
                     (Request.Method.POST, Config.URL_LOGIN, jsonBody, new Response.Listener<JSONObject>() {
 
