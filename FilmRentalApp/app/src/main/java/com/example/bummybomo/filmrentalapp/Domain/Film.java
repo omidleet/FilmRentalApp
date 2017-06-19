@@ -10,6 +10,7 @@ public class Film implements Serializable {
     private int filmId;
     private String title;
     private String description;
+    private String status;
     private String releaseYear;
     private int languageId;
     private int originalLanguageId;
@@ -21,10 +22,11 @@ public class Film implements Serializable {
     private String specialFeatures;
     private String lastUpdate;
 
-    public Film(int filmId, String title, String description) {
+    public Film(int filmId, String title, String description, String status) {
         this.filmId = filmId;
         this.title = title;
         this.description = description;
+        this.status = status;
         this.releaseYear = releaseYear;
         this.languageId = languageId;
         this.originalLanguageId = originalLanguageId;
@@ -35,6 +37,14 @@ public class Film implements Serializable {
         this.rating = rating;
         this.specialFeatures = specialFeatures;
         this.lastUpdate = lastUpdate;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
     }
 
     public int getFilmId() {
@@ -139,5 +149,25 @@ public class Film implements Serializable {
 
     public void setLastUpdate(String lastUpdate) {
         this.lastUpdate = lastUpdate;
+    }
+
+    @Override
+    public String toString() {
+        return "Film{" +
+                "filmId=" + filmId +
+                ", title='" + title + '\'' +
+                ", description='" + description + '\'' +
+                ", status='" + status + '\'' +
+                ", releaseYear='" + releaseYear + '\'' +
+                ", languageId=" + languageId +
+                ", originalLanguageId=" + originalLanguageId +
+                ", rentalDuration=" + rentalDuration +
+                ", rentalRate=" + rentalRate +
+                ", length=" + length +
+                ", replacementCost=" + replacementCost +
+                ", rating='" + rating + '\'' +
+                ", specialFeatures='" + specialFeatures + '\'' +
+                ", lastUpdate='" + lastUpdate + '\'' +
+                '}';
     }
 }

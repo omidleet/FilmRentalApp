@@ -31,9 +31,9 @@ public class MovieOverview extends AppCompatActivity {
         adapter = new MovieAdapter(this, movies);
         movieList.setAdapter(adapter);
 
-        Film film1 = new Film(1, "Scarface", "Available");
-        Film film2 = new Film(2, "Flintstones", "Rented");
-        Film film3 = new Film(3, "Taken 6", "Available");
+        Film film1 = new Film(1, "Scarface", "Blablabla", "Available");
+        Film film2 = new Film(2, "Flintstones", "Blablabla", "Rented");
+        Film film3 = new Film(3, "Taken 6", "Blablabla", "Available");
 
         movies.add(film1);
         movies.add(film2);
