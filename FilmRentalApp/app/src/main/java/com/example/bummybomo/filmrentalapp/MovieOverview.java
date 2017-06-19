@@ -1,11 +1,8 @@
 package com.example.bummybomo.filmrentalapp;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
-import android.view.View;
-import android.widget.AdapterView;
 import android.widget.ListView;
 import java.util.ArrayList;
 
@@ -25,11 +22,8 @@ public class MovieOverview extends AppCompatActivity {
         get = new APIConnectorGET(this);
         get.execute("https://filmrentalserver.herokuapp.com/api/film");*/
 
-
-        //initialise listview
         ListView movieList = (ListView) findViewById(R.id.list_movie);
-        //initialise adapter and attach to listview
-        adapter = new MovieAdapter(this, inflater, movies);
+        adapter = new MovieAdapter(this, movies);
         movieList.setAdapter(adapter);
 
         Movie movie1 = new Movie(1, "Scarface", "Available");
@@ -41,18 +35,5 @@ public class MovieOverview extends AppCompatActivity {
         movies.add(movie3);
 
         adapter.notifyDataSetChanged();
-
-        //set listener(s)
-//        movieList.setOnItemClickListener(this);
     }
-
-/*    @Override
-    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-        Movie movie = movies.get(position);
-
-        Intent i = new Intent(this, MovieOverviewDetailActivity.class);
-        i.putExtra("movie", movie);
-
-        startActivity(i);
-    }*/
 }

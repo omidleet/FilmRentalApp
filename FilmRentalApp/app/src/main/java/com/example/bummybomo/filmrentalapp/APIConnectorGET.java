@@ -1,3 +1,4 @@
+/*
 package com.example.bummybomo.filmrentalapp;
 
 import android.os.AsyncTask;
@@ -15,9 +16,11 @@ import java.net.URL;
 import java.net.URLConnection;
 import java.util.ArrayList;
 
+*/
 /**
  * Created by omidleet on 18-6-2017.
- */
+ *//*
+
 
 public class APIConnectorGET extends AsyncTask<String, Void, String> {
 
@@ -141,4 +144,4 @@ public class APIConnectorGET extends AsyncTask<String, Void, String> {
     public interface OnMoviesAvailable {
         void onOrdersAvailable(Movie film);
     }
-}
+}*/
