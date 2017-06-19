@@ -51,7 +51,7 @@ public class MovieAdapter extends BaseAdapter {
             viewHolder = new MovieAdapter.ViewHolder();
             viewHolder.filmId = (TextView) convertView.findViewById(R.id.id_film);
             viewHolder.title = (TextView) convertView.findViewById(R.id.title_film);
-            viewHolder.status = (TextView) convertView.findViewById(R.id.status_film;
+            viewHolder.status = (TextView) convertView.findViewById(R.id.status_film);
 
             convertView.setTag(viewHolder);
         } else {

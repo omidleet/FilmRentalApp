@@ -1,27 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:padding="10dp">
 
-    <TextView
-        android:id="@+id/id_film"
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="filmId"
-        android:padding="10dp"/>
+        android:orientation="horizontal"
+        android:padding="10dp">
 
-    <TextView
-        android:id="@+id/title_film"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="title"
-        android:padding="10dp"/>
+        <TextView
+            android:id="@+id/id_film"
+            android:layout_width="50dp"
+            android:layout_height="30dp"
+            android:layout_marginEnd="30dp"
+            android:text="FilmID" />
 
-    <TextView
-        android:id="@+id/status_film"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="status"
-        android:padding="10dp"/>
+        <TextView
+            android:id="@+id/title_film"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:layout_marginEnd="30dp"
+            android:gravity="end"
+            android:text="Titel" />
+
+        <TextView
+            android:id="@+id/status_film"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:layout_marginEnd="50dp"
+            android:text="Status" />
+
+    </LinearLayout>
 
 </LinearLayout>

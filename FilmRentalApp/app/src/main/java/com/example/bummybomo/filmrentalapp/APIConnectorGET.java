@@ -2,11 +2,9 @@ package com.example.bummybomo.filmrentalapp;
 
 import android.os.AsyncTask;
 import android.util.Log;
-
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
@@ -26,9 +24,9 @@ public class APIConnectorGET extends AsyncTask<String, Void, String> {
     //tag to use when information is logged, shows class name
     private static final String TAG = APIConnectorGET.class.getSimpleName();
     //call back interface
-    private OnOrdersAvailable listener = null;
+    private OnMoviesAvailable listener = null;
 
-    public APIConnectorGET(OnOrdersAvailable listener) {
+    public APIConnectorGET(OnMoviesAvailable listener) {
         this.listener = listener;
     }
 
@@ -140,7 +138,7 @@ public class APIConnectorGET extends AsyncTask<String, Void, String> {
     }
 
     //call back interface
-    public interface OnOrdersAvailable {
+    public interface OnMoviesAvailable {
         void onOrdersAvailable(Movie film);
     }
 }

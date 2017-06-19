@@ -5,26 +5,28 @@
     android:gravity="center">
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/text_user"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textStyle="bold"
         android:text="Username"
         android:padding="10dp"/>
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/user_edit"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/text_password"
+        android:textStyle="bold"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Password"
         android:padding="10dp"/>
 
     <EditText
-        android:id="@+id/editText2"
+        android:id="@+id/password_edit"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
@@ -38,8 +40,9 @@
         android:paddingEnd="20dp" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/text_subscribe"
         android:layout_width="match_parent"
+        android:textStyle="bold"
         android:textSize="10dp"
         android:gravity="center"
         android:layout_height="wrap_content"
