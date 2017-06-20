@@ -22,7 +22,7 @@ public class Film implements Serializable {
     private String specialFeatures;
     private String lastUpdate;
 
-    public Film(int filmId, String title, String description, String status) {
+    public Film(String title, String description, String status) {
         this.filmId = filmId;
         this.title = title;
         this.description = description;

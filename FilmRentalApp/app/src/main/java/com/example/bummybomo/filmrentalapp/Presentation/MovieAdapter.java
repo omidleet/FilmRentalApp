@@ -1,4 +1,4 @@
-package com.example.bummybomo.filmrentalapp.Domain;
+package com.example.bummybomo.filmrentalapp.Presentation;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
+import com.example.bummybomo.filmrentalapp.Domain.Film;
 import com.example.bummybomo.filmrentalapp.R;
 
 import java.util.ArrayList;
