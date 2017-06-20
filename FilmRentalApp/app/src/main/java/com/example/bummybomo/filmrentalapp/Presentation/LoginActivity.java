@@ -40,11 +40,13 @@ public class LoginActivity extends AppCompatActivity {
 
     public final String TAG = this.getClass().getSimpleName();
 
+    //Hetgene wat gemaakt wordt bij het starten van de activity
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
+        //xml gedeelte die verbanden wordt met de java kant
         editTextEmail = (EditText) findViewById(R.id.editTextEmail);
         editTextPassword = (EditText) findViewById(R.id.editTextPassword);
         txtLoginErrorMsg = (TextView) findViewById(R.id.txtLoginErrorMessage);
