@@ -2,7 +2,6 @@ package com.example.bummybomo.filmrentalapp.Presentation;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-
 import com.example.bummybomo.filmrentalapp.R;
 
 public class MovieOverviewDetailActivity extends AppCompatActivity {
