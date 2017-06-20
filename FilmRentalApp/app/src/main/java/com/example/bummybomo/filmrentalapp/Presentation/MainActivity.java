@@ -1,9 +1,11 @@
-package com.example.bummybomo.filmrentalapp;
+package com.example.bummybomo.filmrentalapp.Presentation;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+
+import com.example.bummybomo.filmrentalapp.R;
 
 public class MainActivity extends AppCompatActivity {
 

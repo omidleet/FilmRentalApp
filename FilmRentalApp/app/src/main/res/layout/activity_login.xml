@@ -5,28 +5,33 @@
     android:gravity="center">
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/text_user"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textStyle="bold"
         android:text="Username"
         android:padding="10dp"/>
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/editTextEmail"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:singleLine="true"/>
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/text_password"
+        android:textStyle="bold"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Password"
         android:padding="10dp"/>
 
     <EditText
-        android:id="@+id/editText2"
+        android:id="@+id/editTextPassword"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:password="true"/>
 
     <Button
         android:id="@+id/login_btn"
@@ -38,13 +43,20 @@
         android:paddingEnd="20dp" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/text_subscribe"
         android:layout_width="match_parent"
+        android:textStyle="bold"
         android:textSize="10dp"
         android:gravity="center"
         android:layout_height="wrap_content"
         android:text="Not a member yet? Click here to subscribe."
         android:padding="10dp"
         android:clickable="true"/>
+
+    <TextView
+        android:id="@+id/txtLoginErrorMessage"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#372c24"/>
 
 </LinearLayout>
