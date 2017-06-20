@@ -31,9 +31,10 @@ public class APIConnectorGET extends AsyncTask<String, Void, String> {
     // Call back
     private OnMovieAvailable listener = null;
 
+    //Token die later in de klasse geinstancieerd wordt voor authorisatie
     private String token;
 
-    // Statics
+    // Logtag for statistics
     private static final String TAG = APIConnectorGET.class.getSimpleName();
     //private static final String urlString = "https://filmrentalserver.herokuapp.com/films";
 
@@ -138,7 +139,6 @@ public class APIConnectorGET extends AsyncTask<String, Void, String> {
                 JSONObject movie = movies.getJSONObject(idx);
 
                 String title;
-                String filmId;
                 String description;
                 String status;
 
@@ -178,10 +178,7 @@ public class APIConnectorGET extends AsyncTask<String, Void, String> {
         }
     }
 
-
-    //
 // convert InputStream to String
-//
     private static String getStringFromInputStream(InputStream is) {
 
         BufferedReader br = null;

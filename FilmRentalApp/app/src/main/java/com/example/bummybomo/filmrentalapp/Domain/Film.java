@@ -6,6 +6,7 @@ import java.io.Serializable;
  * Created by bummybomo on 18-6-2017.
  */
 
+//Domeinklasse die Serializable implementeert, wat betekent dat we de klasse door kunnen geven in activities
 public class Film implements Serializable {
     private int filmId;
     private String title;

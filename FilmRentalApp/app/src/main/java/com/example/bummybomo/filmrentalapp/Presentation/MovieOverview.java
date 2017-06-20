@@ -14,10 +14,10 @@ import com.example.bummybomo.filmrentalapp.R;
 import com.example.bummybomo.filmrentalapp.Service.APIConnectorGET;
 import java.util.ArrayList;
 
-    public class MovieOverview extends AppCompatActivity implements /*AdapterView.OnItemClickListener,
-        View.OnClickListener, */ APIConnectorGET.OnMovieAvailable {
+    public class MovieOverview extends AppCompatActivity implements AdapterView.OnItemClickListener,
+        View.OnClickListener,  APIConnectorGET.OnMovieAvailable {
 
-        //public static final String EXTRA_MOVIE = "MOVIE";
+        public static final String EXTRA_MOVIE = "MOVIE";
         private MovieAdapter adapter;
         private ArrayList<Film> movies = new ArrayList<>();
         private LayoutInflater inflater;
@@ -37,10 +37,10 @@ import java.util.ArrayList;
             ListView movieList = (ListView) findViewById(R.id.list_movie);
             adapter = new MovieAdapter(this, movies);
             movieList.setAdapter(adapter);
-           // movieList.setOnItemClickListener(this);
+            movieList.setOnItemClickListener(this);
         }
 
-/*      @Override
+      @Override
         public void onClick(View v) {
 
         }
@@ -53,7 +53,7 @@ import java.util.ArrayList;
             Intent intent = new Intent(getApplicationContext(), MovieOverviewDetailActivity.class);
             intent.putExtra(EXTRA_MOVIE, f);
             startActivity(intent);
-        }*/
+        }
 
         @Override
         public void OnMovieAvailable(Film film) {
