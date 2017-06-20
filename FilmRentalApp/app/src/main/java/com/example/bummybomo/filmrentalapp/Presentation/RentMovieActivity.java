@@ -1,8 +1,15 @@
 package com.example.bummybomo.filmrentalapp.Presentation;
 
-/**
- * Created by bummybomo on 18-6-2017.
- */
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
 
-class RentMovieActivity {
+import com.example.bummybomo.filmrentalapp.R;
+
+public class RentMovieActivity extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_rent_movie);
+    }
 }
