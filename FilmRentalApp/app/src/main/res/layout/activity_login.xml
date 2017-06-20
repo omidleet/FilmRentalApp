@@ -2,8 +2,29 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center">
+    android:gravity="center"
+    android:background="@color/colorBackground">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:layout_weight="2">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/filmrentalapp"
+            android:layout_marginTop="15dp"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_weight="1">
     <TextView
         android:id="@+id/text_user"
         android:layout_width="match_parent"
@@ -39,6 +60,7 @@
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:text="Login"
+        android:layout_gravity="center"
         android:paddingStart="20dp"
         android:paddingEnd="20dp" />
 
@@ -58,5 +80,6 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:textColor="#372c24"/>
+    </LinearLayout>
 
 </LinearLayout>
