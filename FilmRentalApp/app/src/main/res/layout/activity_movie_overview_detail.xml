@@ -6,21 +6,12 @@
     android:layout_height="match_parent"
     tools:context="com.example.bummybomo.filmrentalapp.Presentation.MovieOverviewDetailActivity">
 
-    <LinearLayout
-        android:layout_width="368dp"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:padding="10dp"
-        tools:layout_editor_absoluteY="0dp"
-        tools:layout_editor_absoluteX="8dp">
-
         <TextView
             android:id="@+id/description_film"
             android:layout_width="match_parent"
             android:gravity="center"
             android:layout_height="wrap_content"
-            android:text="Description" />
-
-    </LinearLayout>
+            android:text="Description"
+            android:layout_gravity="center"/>
 
 </LinearLayout>
