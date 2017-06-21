@@ -141,6 +141,9 @@ public class APIConnectorGET extends AsyncTask<String, Void, String> {
                 String filmId;
                 String description;
                 String status;
+                String releaseYear;
+                int length;
+                String rating;
 
                 if (movie.has("title")) {
                     title = movie.getString("title");
@@ -160,11 +163,32 @@ public class APIConnectorGET extends AsyncTask<String, Void, String> {
                     status = "";
                 }
 
+                if (movie.has("releaseYear")) {
+                    releaseYear = movie.getString("releaseYear");
+                } else {
+                    releaseYear = "";
+                }
+
+                if (movie.has("rating")) {
+                    rating = movie.getString("rating");
+                } else {
+                    rating = "";
+                }
+
+/*                if (movie.has("length")) {
+                    length = movie.getInt("length");
+                } else {
+                    length = "";
+                }*/
+
                 // Create new Product object
-                Film f = new Film(title, description, status);
+                Film f = new Film(title, description, status, releaseYear, rating, length);
                 f.setTitle(title);
                 f.setDescription(description);
                 f.setStatus(status);
+                f.setReleaseYear(releaseYear);
+                f.setLength(length);
+                f.setRating(rating);
 
 
                 //

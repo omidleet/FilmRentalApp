@@ -18,7 +18,16 @@ public class MovieOverviewDetailActivity extends AppCompatActivity {
         film = (Film) getIntent().getSerializableExtra(MovieOverview.EXTRA_MOVIE);
 
         TextView textView = (TextView) findViewById(R.id.description_film);
-        textView.setText(film.getDescription());
+        textView.setText("Description: " + film.getDescription());
+
+        TextView textView1 = (TextView) findViewById(R.id.length_film);
+        textView.setText("Length: " + film.getLength());
+
+        TextView textView2 = (TextView) findViewById(R.id.rating_film);
+        textView.setText("Rating: " + film.getRating());
+
+        TextView textView3 = (TextView) findViewById(R.id.releaseyear_film);
+        textView.setText("ReleaseYear: " + film.getReleaseYear());
     }
 
 
