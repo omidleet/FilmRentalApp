@@ -110,5 +110,21 @@ public class Customer implements Serializable {
     public void setPassword(String password) {
         this.password = password;
     }
+
+    @Override
+    public String toString() {
+        return "Customer{" +
+                "customerId=" + customerId +
+                ", storeId=" + storeId +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", email='" + email + '\'' +
+                ", adresId=" + adresId +
+                ", activeCheck=" + activeCheck +
+                ", createDate='" + createDate + '\'' +
+                ", lastUpdate='" + lastUpdate + '\'' +
+                ", password='" + password + '\'' +
+                '}';
+    }
 }
 
